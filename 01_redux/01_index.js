@@ -10,14 +10,30 @@ const reducer = (prev, action) => {
   switch (action.type) {
     case 'CHANGE_COMP_A':
       return {
+        ...prev,
         compA: action.data,
-        compB: 12,
-        compC: null,
-      }
+      };
+    case 'CHANGE_COMP_B':
+      return {
+        ...prev,
+        compB: action.data,
+      };
+    case 'CHANGE_COMP_C':
+      return {
+        ...prev,
+        compC: action.data,
+      };
+    default:
+      return prev;
   }
 };
 
 const store = createStore(reducer, initState);
+store.subscribe(() => { // react-redux 안에 들어있다.
+                        // 화면 바꾸어 주는 코드
+  console.log('changed');
+});
+
 console.log(store.getState());
 
 // 액션 객체
@@ -36,4 +52,3 @@ const changeCompA = data => {
 
 store.dispatch(changeCompA('b'));
 console.log(store.getState());
-
