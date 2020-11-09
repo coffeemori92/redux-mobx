@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "cd 04_react-redux-class-immer && webpack serve --env development"
+    "dev": "cd 06_moxb-react && webpack serve --env development"
   },
   "author": "coffeemori",
   "license": "ISC",
   "dependencies": {
     "immer": "^7.0.14",
     "mobx": "^6.0.3",
+    "mobx-react": "^7.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -18,9 +19,10 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-loader": "^8.1.0",
     "react-refresh": "^0.9.0",
